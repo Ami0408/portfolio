@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+
+  <title></title>
+</head>
+
+<body>
+  <div id='outbg'>
+      <div id='play'>
+         Hello
+  </div>
+    <div id='inbg'>
+     <div class='name'>
+       <button id='port'>
+         <a href='{% url 'portfolio' %}'>Welcome to my Portfolio 🙂
+         </a>
+       </button>
+        </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<style>
+* {
+  font-family: "Boldonse",system-ui;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+a,a:hover{
+  text-decoration: none;
+}
+  #outbg{
+    height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e0a036;
+    border-radius: 2vh;
+    box-shadow:15px 25px  5px 5px lightgrey;
+    position: relative;
+  transition: all 750ms;
+  overflow: hidden;
+  }
+  #outbg::before {
+    content:'';
+    position: absolute;
+    top:-8%;
+    left:-25%;
+    width:5vh;
+    padding:60px;
+    border-radius:50%;
+    height:5vh;
+    background-color:#ffac59;
+  }
+  #outbg::after {
+    content:'';
+    position: absolute;
+    bottom:-8%;
+    right:-25%;
+    width:5vh;
+    padding:60px;
+    border-radius:50%;
+    height:5vh;
+    background-color:#ffac59;
+  }
+  #outbg:hover {
+    transform: skew(-8deg,7deg);
+    box-shadow:15px 10px  5px 5px lightgrey;
+  }
+  #inbg{
+     background-color: #e0a036;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+    margin-left: 7.5vh;
+    margin-right: 7.5vh;
+    border-radius: 2.1vh; 
+  }
+  #text{
+    margin-top: 0.5vh;
+  }
+  #port{
+    align-items: center;
+    border-radius: 100px;
+    height: 10vh;
+    width: 40vh;
+    padding: 16px;
+    font-size: 3vh;
+    background-color: rgba(235, 176, 79, 1);
+    border: 0.5vh none;
+    -webkit-box-shadow: inset 5px 5px 17px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: inset 5px 5px 17px 3px rgba(0, 0, 0, 0.08);
+  }
+  #port:hover{
+   /*  */font-size: 3.5vh;
+  }
+  #port > *{
+    font-size: 0.6em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+ #play{
+   height: 1vh;
+   width: 1vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #fc7f03;
+   border-radius: 1vh;
+   text-align: center;
+   font-size: 3.5vh;
+   padding:19px;
+   position: absolute;
+   animation: welcome 10s infinite;
+   color: darkslategrey;
+   font-size: 0.7em;
+ }
+ @keyframes welcome{
+   12.5%{
+     transform: scale(2);
+     transform: translate(20vh,40vh);
+     transform: rotate(270deg);
+   }
+   25%{
+     transform: scale(2);
+     transform: translate(0vh,40vh);
+   }
+   50%{
+     transform: scale(2);
+     transform: translate(40vh,40vh);
+     transform: rotate(180deg);
+   
+   }
+   75%{
+     transform: scale(2);
+     transform: translate(40vh,0vh);
+     transform: rotate(360deg);
+   }
+   87.5%{transform: scale(2);
+     transform: translate(40vh,20vh); 
+     
+   }
+   100%{
+     transform: scale(2);
+     transform: translate(0vh,0vh);
+     transform: rotate(180deg);
+   }
+ }
+</style>

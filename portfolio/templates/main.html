@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <section id='outbg'><div id='bg'>
+    <img src='/pfp.jpg' id='photo'>
+    </section>
+    <section>
+         <div id='small'><small>Hey 👋<br></small><div  class='move'>I am</div>
+         <b>Amiola Onifade</b><br>
+         <b id='job'>A Website Developer</b>
+         
+  </div><div>
+    <span>
+      <a href='https://x.com/AmiolaOnifade'>Icon here</a>
+      <a href='https://github.com/Ami0408'>Icon here</a>
+    </span>
+    
+  </div>
+    </section>
+    <section class='skills'>
+      <span>
+      <div id='front'>
+        <small>
+        Front End Development
+</small>        <hr><ul>
+          <li>HTML</li>
+          <li>CSS </li>
+          <li>GIT</li>
+        </ul>
+      </div>
+      <div id='back'>
+        <small>Back End Development</small><hr>
+        <ul>
+          <li>Python</li>
+          <li>Django</li>
+        </ul>
+      </div>
+      </span>
+    </section>
+	<div id='r'>
+	<a href='{% url 'review' %}'> Review
+		</a>
+</div>
+    <footer id='cv'>
+      <div class='incv'>
+        <button id='but' onclick='eror()'>
+          DOWNLOAD CV
+        </button>
+      </div>
+    </footer>
+    
+</body>
+
+</html>
+<style>
+section{
+  
+}
+#r{
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	height: 80vh;
+	position: sticky;
+}
+
+body{
+  background-color: #BED1CC;
+}
+  #outbg{
+    position: absolute;
+    background-color: #E6E8FF8A;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    border-radius: 50px;
+    margin-bottom: 3px;
+    
+    
+  }
+  #photo{
+    height: 27vh;
+    width: 25vh;
+    border-radius: 100%;
+    margin-top: 4vh;
+  }
+  #bg{
+      display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  #small{
+    text-align: center;
+    position: relative;
+    top: 32vh;
+    margin-top: 2vh;
+    margin-left: 4vh;
+    font-size: 4vh;
+    padding: 3px 3px 3px 3px;
+    
+  }
+  #em{
+    font-size: 6vh;
+  }
+  #small:hover{
+    transform: scale(0.9);
+  }
+  #job{
+    margin-top: 2vh;
+    font-weight: 200%;
+    font-family: 'Times New Roman';
+  }
+  span{
+   position: relative;
+   top: 34vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+  }
+  a{
+    text-decoration: none;
+    text-decoration-color: yellow;
+  }
+  .move{
+    display: flex;
+    height: 5vh;
+    width: 6vh;
+    border-radius: 2.5vh;
+    border: none solid black;
+    font-weight: 1vh;
+    animation: rota 3s infinite;
+    padding-top: 4px;
+    padding-left: 3px;
+    font-family: 'Times New Roman';
+    position: absolute;
+    margin-right: 1vh;
+    font-size: 2.5vh;
+    
+  }
+  
+  @keyframes rota{
+    50%{
+      background-color: darkcyan;
+      display: flex;
+      align-items: center;
+    }
+    100%{
+      background-color: yellow;
+      transform: rotate(360deg);
+    }
+  }
+  b{
+    position: relative;
+    top: 3px;
+  }
+  .skills{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    border-collapse: collapse;
+    
+  }
+
+  #front,#back{
+    margin-top: 7.5vh;
+    height: 25vh;
+    width: 20vh;
+    border: none solid grey;
+    border-radius: 20px;
+    font-size: 2vh;
+    padding-left: 1.5px;
+    font-style: 'Times New Roman';
+    background-color: #3BB6E3;
+    box-shadow: 5px 5px 5px 5px lightgrey;
+   
+    
+  }
+ .skills{
+   animation: group 2s linear;
+    }
+  @keyframes group{
+    0%{
+      transform:  translate(2vh,2vh) rotateY(20deg) scale(0.91);
+      
+    }
+  }
+  
+  #front{
+    margin-right: 2.5vh;
+  }
+  #back{
+    margin-left: 2.5vh;
+  }
+  #cv{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+  #cv:hover{
+    transform: scale(0.85);
+  }
+ #but{
+   margin-top: 43vh;
+   height: 6vh;
+   width: 17vh;
+   border: 1px solid black;
+   border-radius: 100px;
+   font-size: 2.5vh;
+   background-color: #6CC7F7;
+   color: white;
+ }
+ hr{
+   background-color: #92FFA0;
+   border: 1px dashed #87ADEA;
+ }
+  #cv{
+    position: relative;
+    bottom: 0;
+  }
+  li{
+    font-size: 2.5vh;
+    list-style-type: none;
+  }
+  small{
+    display: flex;
+    font-size: 3vh;
+    text-align: center;
+  }
+ #outbg::before{
+   content: '';
+   height: 20vh;
+   border-radius: 50%;
+   background-color: #7BFFE0;
+   color: yellow;
+ }
+</style>
+<script>
+ function eror(){
+   alert('\tIn progress!\n\tStill a beginner ');
+ }
+</script>
